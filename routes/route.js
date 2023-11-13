@@ -12,7 +12,6 @@ router.get('/:organizationId/chatrooms/:chatroomID/:roomId',chatController.getCh
 router.get('/auth/globalchatrooms',chatController.getAllGlobalChatrooms);
 router.get('/:organizationId/chatrooms/:chatroomID/:roomId/messages',chatController.getAllMessagesFromRoomId);
 router.delete('/user/:userId',chatController.deleteUserById);
-router.delete('/:organizationId/chatrooms/:chatroomID/:roomId/messages/:messageId',chatController.deleteMessageById);
 router.put('/user',chatController.createUser);
 router.put('/:organizationId/chatrooms/:chatroomID',chatController.createRoom);
 router.put('/:organizationId',chatController.createOrganization);
@@ -22,5 +21,3 @@ router.post('/:organizationId/chatrooms/:chatroomID',chatController.createRoom);
 router.post('/:organizationId',chatController.createOrganization);
 router.post('/:organizationId/chatrooms/:chatroomID/:roomId/message',chatController.sendMessage);
 module.exports = router;
-
-//author:praneeth
