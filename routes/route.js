@@ -12,7 +12,7 @@ router.get('/:organizationId/chatrooms/:chatroomID/:roomId',chatController.getCh
 router.get('/auth/globalchatrooms',chatController.getAllGlobalChatrooms);
 router.get('/:organizationId/chatrooms/:chatroomID/:roomId/messages',chatController.getAllMessagesFromRoomId);
 router.delete('/user/:userId',chatController.deleteUserById);
-router.delete('/:organizationId/chatrooms/:organizationId/messages/:messageId',chatController.deleteMessageById);
+router.delete('/:organizationId/chatrooms/:chatroomID/:roomId/messages/:messageId',chatController.deleteMessageById);
 router.put('/user',chatController.createUser);
 router.put('/:organizationId/chatrooms/:chatroomID',chatController.createRoom);
 router.put('/:organizationId',chatController.createOrganization);
