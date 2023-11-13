@@ -7,6 +7,8 @@ const PORT = process.env.PORT||3000;
 const chatroutes = require('./routes/route');
 app.use(bodyparser.json());
 app.use('/api/organizations/',chatroutes);
+var cors = require('cors');
+app.use(cors());
 app.get('/', (req, res) => {
     res.json({
         Authentication:"login"
